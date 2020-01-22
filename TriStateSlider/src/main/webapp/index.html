@@ -1,0 +1,58 @@
+<!-- 
+Copyright [2019] [Adrian Inness]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. 
+/-->
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tri-State Analog Slider</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Include Javascript Library for the component /-->
+        <!-- Use the minified (.min) one for production releases /-->
+        <script src="lib/trislider-1.0.0.min.js"></script>
+    </head>    
+    <body>
+        <form>
+            <!-- Create a canvas with a unique ID /-->
+            <canvas id="sliderA"></canvas><br/>
+            <!-- Create 3 inputs that are the ID + x,y,x - They can be hidden if you want. /-->
+            Happy<input type="text" id="sliderA1" value="0" size="2"/>%<br/>
+            Sad<input type="text" id="sliderA2" value="0" size="2"/>%<br/>
+            Apathic<input type="text" id="sliderA3" value="0" size="2"/>%<br/>
+            <hr/>
+            <!-- Example 2 /-->
+            <canvas id="sliderB"></canvas><br/>
+            Muscular<input type="text" id="sliderB1" value="0" size="2"/>%<br/>
+            Thin<input type="text" id="sliderB2" value="0" size="2"/>%<br/>
+            Obese<input type="text" id="sliderB3" value="0" size="2"/>%
+        </form>
+        <!-- 
+            Initialize slider components with
+            Canvas ID
+            Radius (This is both display size and the maximum value of a slider.)
+            Label 1
+            Color 1
+            Label 2
+            Color 2
+            Label 3
+            Color 3
+        /-->
+        <script>
+            init3Slider('sliderA', 50, 'Happy','#FF0000','Sad','#00FF00','Apathic','#0000FF'); 
+            init3Slider('sliderB', 100, 'Muscular','#FF00FF','Thin','#FFFF00','Obese','#00FFFF');
+        </script>
+    </body>
+</html>
+
